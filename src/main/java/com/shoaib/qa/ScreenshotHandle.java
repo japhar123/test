@@ -19,7 +19,8 @@ public class ScreenshotHandle {
 		driver = new ChromeDriver();// 1.Launch Chrome Browser
 
 		driver.get("https://www.flipkart.com/");
-		takeScreenshot("Flipkart_Screenshot"); //static method so need to create Object 
+		takeScreenshot("Flipkart_LoginPage_Screenshot"); //static method so need to create Object 
+		driver.close();
 	}
 
 	/*
@@ -41,6 +42,6 @@ public class ScreenshotHandle {
 		/* Copy the Screenshot to desired location using copy file method. File Utils(Files) is a Class 
 		 * and used for handling all file point of view. And Copy File from source to destination */
 		
-		Files.copy(file,new File("D:\\javabykiran\\Basic_Screenshot_Code_Java_Selenium\\Screenshots\\"+filename+System.currentTimeMillis()+".png"));
+		Files.copy(file,new File("D:\\javabykiran\\Basic_Screenshot_Code_Java_Selenium\\Screenshots\\"+filename+System.currentTimeMillis()+".jpeg"));
 	}
 }
